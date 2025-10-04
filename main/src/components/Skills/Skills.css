@@ -1,0 +1,183 @@
+/* Skills Section Container */
+.skills-combined {
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  background: radial-gradient(circle at top, #0a0a0f, #050509);
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Subtle techy grid background */
+.skills-combined::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+              linear-gradient(180deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+/* Main Header */
+.skills-combined h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #00eaff, #ff00ff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s infinite linear;
+  background-size: 300% 300%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sub-title */
+.skills-combined p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #2be790;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sub-section Titles */
+.section-title {
+  font-size: 1.6rem;
+  margin: 2rem 0 1rem;
+  color: #0ad8ef;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Skill Card (Glassmorphism + Animated border) */
+.skill-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(90deg, #00eaff, #ff00ff, #ffd700, #00eaff);
+  background-size: 300% 300%;
+  animation: gradientShift 8s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: 0;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+}
+
+/* Badge */
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+}
+
+/* Icon */
+.icon {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0,238,255,0.6));
+  transition: transform 0.4s ease;
+}
+.skill-card:hover .icon img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Skill Name */
+.skill-card p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Level Text */
+.level-text {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.level-text.expert {
+  background: linear-gradient(90deg, #FFD700, #FFAA00);
+  color: #000;
+}
+.level-text.intermediate {
+  background: linear-gradient(90deg, #3B82F6, #1E40AF);
+  color: #fff;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  height: 12px;
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  border-radius: 12px;
+  animation: fillProgress 2s ease forwards;
+}
+
+/* Percent Text */
+.percent-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes fillProgress {
+  from { width: 0; }
+}
