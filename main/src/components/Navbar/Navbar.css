@@ -1,6 +1,7 @@
+/* Navbar container */
 .navbar {
   width: 100%;
-  background: linear-gradient(90deg, #0f172a, #1e3a8a, #be185d);
+  background: linear-gradient(90deg,  #0f172a, #1e3a8a,#be1889);
   color: white;
   padding: 1rem 2rem;
   position: fixed;
@@ -8,14 +9,36 @@
   z-index: 50;
 }
 
+/* Layout */
 .nav-container {
   display: flex;
-  justify-content: space-between; /* logo left, nav right */
+  justify-content: space-between;
   align-items: center;
   position: relative;
 }
 
-/* Centered links */
+/* ✅ Logo section */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo {
+  width: 120px;
+  height: 45px;
+  border-radius: 50%; /* Optional: make it circular */
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #b9c90e;
+}
+
+/* ✅ Centered nav links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -35,7 +58,7 @@
   color: #f472b6;
 }
 
-/* Mobile menu */
+/* ✅ Mobile responsiveness */
 .nav-toggle {
   display: none;
   background: none;
@@ -45,7 +68,6 @@
   cursor: pointer;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .nav-links {
     position: static;
