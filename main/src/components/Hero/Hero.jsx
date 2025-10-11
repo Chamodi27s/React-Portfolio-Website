@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.css";
 import bgImg from "../assets/7.avif";       // background image
 import HeroImg from "../assets/Hero.jpg";   // right-side hero image
+import CV from "../assets/Chamodi Sandeepani.pdf";
 
 const Hero = () => {
   return (
@@ -23,7 +24,10 @@ const Hero = () => {
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="view-projects">View Projects</a>
-            <a href="#about" className="about-me">About Me</a>
+            <a href={CV} download="Chamodi_Sandeepani_CV.pdf" className="download-cv">
+  Download CV
+</a>
+
           </div>
         </div>
 

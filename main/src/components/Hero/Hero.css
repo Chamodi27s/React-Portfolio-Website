@@ -127,7 +127,7 @@
 }
 
 .view-projects,
-.about-me {
+.download-cv {
   padding: 0.8rem 2rem;
   border-radius: 9999px;
   text-decoration: none;
@@ -146,13 +146,13 @@
   box-shadow: 0 6px 20px rgba(255,0,204,0.5);
 }
 
-.about-me {
+.download-cv {
   background: linear-gradient(90deg, #00ffff, #ffea00);
   color: black;
   border: 2px solid #fff;
 }
 
-.about-me:hover {
+.download-cv:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0,255,255,0.5);
 }
