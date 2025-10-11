@@ -77,7 +77,7 @@
   line-height: 1.2;
   margin-bottom: 1rem;
   color: #fff;
-  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+  text-shadow: 0 0 10px #100a0f, 0 0 20px #96257f;
 }
 
 .animated-roles {
@@ -85,9 +85,9 @@
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #020c0c;
+  border-right: 3px solid #27d8d8;
   animation: typingRoles 6s steps(50, end) infinite, blink 0.7s step-end infinite;
-  background: linear-gradient(270deg, #0f8650, #bbeaea, #a697e1);
+  background: linear-gradient(270deg, #03ec49, #caf705, #f39ccf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
@@ -101,12 +101,12 @@
 
 @keyframes blink {
   0%, 100% { border-color: transparent; }
-  50% { border-color: #1a1d1d; }
+  50% { border-color: hsl(180, 53%, 66%); }
 }
 
 .hero-text p {
   margin-top: 1rem;
-  color: #b1e70c;
+  color: #f5f903;
   font-size: 1.1rem;
   line-height: 1.6;
   font-weight: 500;
