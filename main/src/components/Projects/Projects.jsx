@@ -12,6 +12,8 @@ import aiImg from "../assets/AI.jpg";
 import cImg from "../assets/3.jpg";
 import sImg from "../assets/4.jpeg";
 import carImg from "../assets/car.jpg";
+import userDirectoryImg from "../assets/user-directory.jpg";
+import healthcareImg from "../assets/healthcare.jpg";
 
 const projects = [
   {
@@ -93,6 +95,20 @@ const projects = [
       "An arcade-style Python game where the player drives a car along a 3-lane road, avoiding randomly appearing vehicles. The game gets progressively harder as the score increases, featuring smooth controls, score tracking, and a Game Over screen.",
     image: carImg,
     link: "https://github.com/Chamodi27s/Python_Car_Game.git",
+  },
+  {
+    id: 11,
+    title: "User Directory Mobile App",
+    description:"A dynamic User Directory application built with Flutter, demonstrating efficient RESTful API integration, asynchronous data handling, and clean UI architecture for listing and viewing user profiles.",
+    image: userDirectoryImg,
+    link: "https://github.com/Chamodi27s/flutter_user_directory.git",
+  },
+  {
+    id: 12,
+    title: "Smart Heathcare Appointment System",
+    description:"A comprehensive web-based healthcare platform designed to streamline doctor-patient interactions. Features include real-time appointment scheduling, doctor availability management, and secure patient profile handling.",
+    image: healthcareImg,
+    link: "https://github.com/Chamodi27s/suwasewana.git",
   },
 ];
 
