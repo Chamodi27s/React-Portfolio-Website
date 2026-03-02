@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import bgImg from "../assets/7.avif";       // background image
 import HeroImg from "../assets/Hero.jpg";   // right-side hero image
-import CV from "../assets/Chamodi Sandeepani.pdf";
+import CV from "../assets/Full Stack.pdf";
 
 const Hero = () => {
   return (
