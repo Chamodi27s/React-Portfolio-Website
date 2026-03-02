@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="hero-text">
           <h1 className="animated-title">Hi, I'm Chamodi Sandeepani 👩‍💻</h1>
           <h2 className="animated-roles">
-            Frontend Developer | QA Tester | AI Enthusiast
+            Frontend Developer | Full Stack Developer | Mobile App Developer
           </h2>
           <p>
             I design and build user-friendly, creative, and intelligent applications
