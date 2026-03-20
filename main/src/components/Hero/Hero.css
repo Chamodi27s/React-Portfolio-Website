@@ -1,120 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Container */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main Container */
 .hero-container {
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 2rem 1rem;
+  color: #fff;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
-  z-index: 1;
 }
 
-/* Overlay neon glow effect */
-.hero-container::before {
-  content: '';
+/* Dark overlay */
+.hero-container::after {
+  content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 30% 30%, #ff00cc80, transparent 50%),
-              radial-gradient(circle at 70% 70%, #00ffff80, transparent 50%);
-  animation: moveGlow 20s linear infinite;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(8, 8, 25, 0.88),
+    rgba(18, 18, 45, 0.78),
+    rgba(33, 10, 53, 0.82)
+  );
   z-index: 0;
-  pointer-events: none;
 }
 
-@keyframes moveGlow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+/* Animated glow */
+.hero-container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -120px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(255, 0, 204, 0.25), transparent 65%);
+  filter: blur(40px);
+  animation: floatingGlow 8s ease-in-out infinite alternate;
+  z-index: 0;
 }
 
-/* Hero Section (Glassmorphism) */
+@keyframes floatingGlow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 60px);
+  }
+}
+
+/* Hero Card */
 .hero-section {
+  width: 100%;
+  max-width: 1250px;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 12px 50px rgba(0,0,0,0.4);
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   position: relative;
   z-index: 1;
-  transition: all 0.3s ease-in-out;
 }
 
-/* Hover lift effect */
-.hero-section:hover {
-  transform: translateY(-5px);
-}
-
-/* Text Section */
+/* Text */
 .hero-text {
-  max-width: 600px;
+  flex: 1;
+  max-width: 650px;
   text-align: center;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
+.animated-title {
+  font-size: 2.5rem;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: #fff;
-  text-shadow: 0 0 10px #100a0f, 0 0 20px #96257f;
+  color: #ffffff;
+  text-shadow: 0 4px 18px rgba(255, 0, 204, 0.35);
 }
 
 .animated-roles {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #27d8d8;
-  animation: typingRoles 6s steps(50, end) infinite, blink 0.7s step-end infinite;
-  background: linear-gradient(270deg, #03ec49, #caf705, #f39ccf);
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  background: linear-gradient(90deg, #00f5ff, #ff4ecd, #ffe600);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+  animation: gradientMove 4s linear infinite;
 }
 
-@keyframes typingRoles {
-  0% { width: 0; }
-  50% { width: 100%; }
-  100% { width: 0; }
-}
-
-@keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: hsl(180, 53%, 66%); }
+@keyframes gradientMove {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .hero-text p {
-  margin-top: 1rem;
-  color: #f5f903;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #f3f4f6;
+  max-width: 560px;
+  margin: 0 auto;
+  opacity: 0.95;
 }
 
 /* Buttons */
@@ -122,86 +135,164 @@
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .view-projects,
 .download-cv {
-  padding: 0.8rem 2rem;
-  border-radius: 9999px;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  transition: all 0.35s ease;
+  display: inline-block;
+  border: none;
 }
 
 .view-projects {
-  background: linear-gradient(90deg, #ff00cc, #00ffff);
-  color: rgb(26, 3, 3);
-}
-
-.view-projects:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(255,0,204,0.5);
+  background: linear-gradient(90deg, #ff00cc, #00e5ff);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(255, 0, 204, 0.28);
 }
 
 .download-cv {
-  background: linear-gradient(90deg, #00ffff, #ffea00);
-  color: black;
-  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.12);
+}
+
+.view-projects:hover,
+.download-cv:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.view-projects:hover {
+  box-shadow: 0 14px 32px rgba(255, 0, 204, 0.4);
 }
 
 .download-cv:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,255,255,0.5);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 14px 32px rgba(0, 255, 255, 0.2);
 }
 
-/* Hero image */
+/* Image */
 .hero-image-container {
   flex: 1;
   display: flex;
   justify-content: center;
-  perspective: 1000px;
+  align-items: center;
 }
 
 .hero-image {
-  width: 350px;
+  width: 320px;
   max-width: 100%;
-  border-radius: 1rem;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-  animation: float 4s ease-in-out infinite;
-  transition: transform 0.3s;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 0 0 10px rgba(255, 255, 255, 0.05),
+    0 20px 45px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 255, 255, 0.18);
+  animation: floatImage 4s ease-in-out infinite;
+  transition: all 0.35s ease;
 }
 
 .hero-image:hover {
-  transform: scale(1.05) rotateY(5deg);
+  transform: scale(1.05);
+  box-shadow:
+    0 0 0 12px rgba(255, 255, 255, 0.06),
+    0 24px 55px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(255, 0, 204, 0.2);
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+@keyframes floatImage {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
-/* Desktop layout */
-@media(min-width: 1024px){
+/* Tablet */
+@media (min-width: 768px) {
+  .animated-title {
+    font-size: 3.2rem;
+  }
+
+  .animated-roles {
+    font-size: 1.45rem;
+  }
+
+  .hero-image {
+    width: 380px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
   .hero-section {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6rem 3rem;
+    padding: 4rem 3rem;
   }
 
   .hero-text {
     text-align: left;
   }
 
+  .hero-text p {
+    margin: 0;
+  }
+
   .hero-buttons {
     justify-content: flex-start;
   }
+
+  .animated-title {
+    font-size: 4rem;
+  }
+
+  .animated-roles {
+    font-size: 1.6rem;
+  }
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-container {
+    padding: 1rem;
+  }
+
+  .hero-section {
+    padding: 2rem 1.2rem;
+    gap: 2rem;
+    border-radius: 20px;
+  }
+
+  .animated-title {
+    font-size: 2rem;
+  }
+
+  .animated-roles {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-image {
+    width: 240px;
+  }
+
+  .view-projects,
+  .download-cv {
+    width: 100%;
+    text-align: center;
+  }
 }
