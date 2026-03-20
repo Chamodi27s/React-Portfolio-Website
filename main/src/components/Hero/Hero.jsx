@@ -3,6 +3,7 @@ import "./Hero.css";
 import bgImg from "../assets/7.avif";       // background image
 import HeroImg from "../assets/Hero.jpg";   // right-side hero image
 import CV from "../assets/Full Stack.pdf";
+import profile from "../assets/Chamodi.png";
 
 const Hero = () => {
   return (
@@ -33,7 +34,7 @@ const Hero = () => {
 
         {/* Right: Hero Image */}
         <div className="hero-image-container">
-          <img src={HeroImg} alt="Chamodi" className="hero-image" />
+          <img src={profile} alt="Chamodi" className="profile" />
         </div>
       </section>
     </div>
