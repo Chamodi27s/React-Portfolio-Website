@@ -14,101 +14,119 @@ import sImg from "../assets/4.jpeg";
 import carImg from "../assets/car.jpg";
 import userDirectoryImg from "../assets/user-directory.jpg";
 import healthcareImg from "../assets/healthcare.jpg";
+import melodyImg from "../assets/melody.jpg";
+import filmImg from "../assets/film.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "TechStrike Club - Announcement Management System",
+    title: "Full-Stack E-Commerce Application (Music Store)",
     description:
-      "Full-stack web app for managing club announcements with CRUD operations, image uploads (up to 5MB), priority & category badges, and marking important posts. Built with React, Node.js, Express, MongoDB, Multer, and CSS.",
-    image: teckstrikeImg,
-    link: "https://github.com/TechstrikeCinec/Techstrike_WebSite.git",
+      "A full-featured e-commerce platform for a music store with secure authentication, product management, and a smart cart system. Includes checkout flow, customer reviews, and an admin dashboard for managing inventory and orders.",
+    image: melodyImg,
+    link: "https://github.com/Chamodi27s/music-instrument-online-store.git",
   },
   {
     id: 2,
+    title: "Netflix Clone Application",
+    description:
+      "A responsive Netflix-style web app built with React and Firebase. Features user authentication, dynamic movie listings, trailer previews, and smooth horizontal scrolling for an immersive user experience.",
+    image: filmImg,
+    link: "https://github.com/Chamodi27s/Netflix_Clone_Website.git",
+  },
+  {
+    id: 3,
     title: "Smart AI Chatbot",
     description:
-      "A web-based AI chatbot built with Python (Flask) and HTML/CSS/JS, using OpenRouter API (e.g., Mistral-7B) for real-time AI responses. Features an interactive, responsive interface with a simple and customizable design.",
+      "A web-based AI chatbot using Flask and OpenRouter API for real-time responses. Designed with a clean UI and interactive chat experience, supporting customizable and intelligent conversations.",
     image: chatbotImg,
     link: "https://github.com/Chamodi27s/SMART_AI_CHATBOT.git",
   },
   {
-    id: 3,
+    id: 4,
     title: "Hotel Booking System",
     description:
-      "A full-stack hotel booking platform built with React.js and Tailwind CSS. Features role-based access for guests and hotel owners, room browsing, bookings, and a real-time dashboard for hotel management. Responsive and user-friendly interface.",
+      "A full-stack booking platform with role-based access for users and hotel owners. Includes room browsing, booking management, and a responsive dashboard for real-time operations.",
     image: hotelBookingImg,
     link: "https://github.com/Chamodi27s/Hotel_Booking_System.git",
   },
   {
-    id: 4,
+    id: 5,
     title: "Event Booking System",
     description:
-      "The Event Booking System is a responsive web application that allows users to view ongoing and upcoming events, check event details through interactive cards, and book their seats with a simple and user-friendly flow. By clicking the Book Now button, users are directed to a seat layout page where they can complete their booking easily. The system enhances event visibility while providing a smooth and modern booking experience. Built using React, Node.js, MongoDB, and Tailwind CSS, it ensures both functionality and a clean interface.",
+      "A modern event booking system with interactive event cards and seat selection. Provides a smooth booking flow with a responsive UI and backend integration for managing events and users.",
     image: eventImg,
     link: "https://github.com/Chamodi27s/Eventryaproject.git",
   },
   {
-    id: 5,
+    id: 6,
     title: "Hotel Management System",
     description:
-      "Full-stack dashboard for managing hotel operations, bookings, rooms, and staff with real-time updates and analytics. Built with React.js, Tailwind CSS, Node.js, and Chart.js.",
+      "A dashboard system for managing hotel operations, including bookings, rooms, and staff. Features real-time updates and analytics with a clean and user-friendly interface.",
     image: hotelManageImg,
     link: "https://github.com/Chamodi27s/hotel_management_system-in-java.git",
   },
   {
-    id: 6,
+    id: 7,
     title: "Travel Booking App",
     description:
-      "Responsive travel booking site with package browsing, booking form validation, and admin panel. Built with PHP & MySQL. It features a user-friendly booking form with validation, dynamic package listings, sticky navigation, and a modern UI with animations. The admin panel enables managing bookings and packages efficiently, while the backend (PHP & MySQL) handles data storage and processing.",
+      "A responsive travel booking website with dynamic package listings and form validation. Includes an admin panel for managing bookings and a modern UI for better user experience.",
     image: travelBookingImg,
     link: "https://github.com/Chamodi27s/SereneTripsLK.git",
   },
   {
-    id: 7,
+    id: 8,
     title: "AI-SAAS System",
     description:
-      "A cloud-based platform that uses AI to generate high-quality articles, blog posts, and images on demand. Users can create content quickly with customizable prompts, automated SEO-friendly text, and AI-generated visuals, all through an intuitive, responsive web interface. The app streamlines content creation for marketers, bloggers, and businesses, saving time while enhancing creativity.",
+      "An AI-powered SaaS platform for generating articles, blogs, and images. Provides customizable prompts, SEO-friendly content, and a fast, intuitive interface for content creation.",
     image: aiImg,
     link: "https://github.com/Chamodi27s/AI_SAAS_Platform.git",
   },
   {
-    id: 8,
+    id: 9,
     title: "Programming Learning Assistance",
     description:
-      "A simple C-based console program designed to help beginners learn C programming. Includes topic explanations, code examples, and quizzes. Features an interactive menu for easy navigation. Great for students who want to practice and understand core C concepts like loops, functions, and variables.",
+      "A beginner-friendly C-based learning tool with tutorials, examples, and quizzes. Designed to help students understand core programming concepts through an interactive console interface.",
     image: cImg,
     link: "https://github.com/Chamodi27s/Chamodi27s-Programming_Learning_Assistant.git",
   },
   {
-    id: 9,
+    id: 10,
     title: "LinkedIn Post Automation",
     description:
-      "Automates LinkedIn posting using Java and Selenium WebDriver. Supports creating text posts, long posts, posts with special characters, and empty posts, while verifying outcomes automatically. Includes screenshot capture for validation. Technologies: Java, Selenium WebDriver, WebDriverManager, ChromeDriver, Apache Commons IO",
+      "A Selenium-based automation tool for posting on LinkedIn. Supports multiple post types, validation with screenshots, and automated testing for reliable performance.",
     image: sImg,
     link: "https://github.com/Chamodi27s/LinkedIn_Post_Upload_Automation.git",
   },
   {
-    id: 10,
+    id: 11,
     title: "Car Game in Pygame",
     description:
-      "An arcade-style Python game where the player drives a car along a 3-lane road, avoiding randomly appearing vehicles. The game gets progressively harder as the score increases, featuring smooth controls, score tracking, and a Game Over screen.",
+      "An arcade-style car game built with Python and Pygame. Features smooth controls, increasing difficulty levels, and a scoring system for an engaging gameplay experience.",
     image: carImg,
     link: "https://github.com/Chamodi27s/Python_Car_Game.git",
   },
   {
-    id: 11,
+    id: 12,
     title: "User Directory Mobile App",
-    description:"A dynamic User Directory application built with Flutter, demonstrating efficient RESTful API integration, asynchronous data handling, and clean UI architecture for listing and viewing user profiles.",
+    description:"A Flutter-based mobile app that displays user data using REST APIs. Focuses on clean UI design, efficient data handling, and smooth navigation between user profiles.",
     image: userDirectoryImg,
     link: "https://github.com/Chamodi27s/flutter_user_directory.git",
   },
   {
-    id: 12,
+    id: 13,
     title: "Smart Heathcare Appointment System",
-    description:"A comprehensive web-based healthcare platform designed to streamline doctor-patient interactions. Features include real-time appointment scheduling, doctor availability management, and secure patient profile handling.",
+    description:"A healthcare platform for managing doctor appointments and patient records. Includes real-time scheduling, availability tracking, and secure profile management.",
     image: healthcareImg,
     link: "https://github.com/Chamodi27s/suwasewana.git",
+  },
+  {
+  id: 14,
+    title: "TechStrike Club - Announcement Management System",
+    description:
+      "A full-stack web app for managing club announcements with CRUD operations. Supports image uploads, priority tagging, and category-based filtering with a modern UI.",
+    image: teckstrikeImg,
+    link: "https://github.com/TechstrikeCinec/Techstrike_WebSite.git",
   },
 ];
 
